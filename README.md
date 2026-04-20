@@ -6,11 +6,11 @@ earned through hands-on programs like The Odin Project.
 
 ## 🗂️ Structure
 
-| Folder | Content |
-|---|---|
+| Folder              | Content                                                              |
+| ------------------- | -------------------------------------------------------------------- |
 | `/the-odin-project` | Projects and exercises from The Odin Project (Full Stack JavaScript) |
-| `/challenges` | Coding challenges and problem-solving exercises |
-| `/certificates` | Course completion certificates |
+| `/challenges`       | Coding challenges and problem-solving exercises                      |
+| `/certificates`     | Course completion certificates                                       |
 
 ## 🛠️ Technologies Covered
 
