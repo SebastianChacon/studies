@@ -1,7 +1,12 @@
-# assignment: how write best form emails
+# Assignment: create a if payment
 
-first = "sebastian"
-last = "chacon"
+good_credit = False
+house_price = 1000000
 
-print(first + "[" + last + "]" + "is a coder")
-print(f'{first} [{last}] is a coder')
+print(10 / 10)
+if good_credit:
+    house_price = 0.1 * house_price
+else: 
+    house_price *= 0.2
+
+print(f'Put down payment {house_price}')
