@@ -1,4 +1,7 @@
-name = "jennifer"
+# assignment: how write best form emails
 
-print(name[:-1])
-print(name[1:-1])
+first = "sebastian"
+last = "chacon"
+
+print(first + "[" + last + "]" + "is a coder")
+print(f'{first} [{last}] is a coder')
