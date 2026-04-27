@@ -1,4 +1,3 @@
-name = input("What's your name? ")
-color = input("What's your favorite color? ")
-
-print(name + " like " + color)
+weight_kg = input("What's your weight(kg): ")
+weight_lb = int(weight_kg) * 2.2
+print(weight_lb)
