@@ -1,12 +1,10 @@
-# Assignment: create a if payment
+# Assignment 7
 
-good_credit = False
-house_price = 1000000
+name = input("what is your name? ")
 
-print(10 / 10)
-if good_credit:
-    house_price = 0.1 * house_price
-else: 
-    house_price *= 0.2
-
-print(f'Put down payment {house_price}')
+if len(name) <= 3:
+    print("name be at least 3 characters")
+elif len(name) >= 50:
+    print("name be a maximum 50 characters")
+else:
+    print("Name looks fine!!")
