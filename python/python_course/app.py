@@ -1,14 +1,18 @@
-# Assignment: create a guess number
 
-tries = 1
+# Assignment: Car game
 
-while tries <= 3:
-    tries += 1
-    num = int(input("guess number: "))
-    if num == 4:
-        print("you win!!")
+while 0 < 1:
+    command = input(">")
+
+    if command.upper() == "HELP":
+        print("""
+            start - to start the car
+            stop - to stop the car
+            quit - to exit """)
+    elif command.upper() == "START":
+        print("Start the car")
+    elif command.upper() == "STOP":
+        print("Stop the car")
+    elif command.upper() == "QUIT":
+        print("Exit the game")
         break
-    
-
-else: 
-    print("You failed!!")
