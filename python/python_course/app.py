@@ -1,7 +1,11 @@
-# Assignment: calculate all prices of the shop
+# Assignment FOR
 
-shop = [10, 20, 30]
+list = [ 5, 2, 5, 2, 2]
 
-for item in shop:
-    item += item
-    print(item)
+for x in list:
+    output = ''
+    for y in range(x):
+        output += 'x'
+
+    print(output)
+    
