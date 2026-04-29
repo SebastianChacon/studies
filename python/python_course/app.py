@@ -1,24 +1,19 @@
-# Assignment: number
+# Assignment: return a emoji
 
-nums = "123"
+message = "I'm very happy :)"
 
-phone_number = {
-    "1": "uno",
-    "2": "dos",
-    "3": "three",
-    "4": "Four",
-    "5": "Five",
-    "6": "Six",
-    "7": "Seven",
-    "8": "Eight",
-    "9": "Nine",
-    "0": "Zero"
+emojis = {
+    ":)": "🙂",
+    ":(": "🙁",
+    ":c": "☹️",
+    ":D": "😃",
+    "xD": "😆",
+    "<3": "❤️"
 }
 
-output = ""
 
-for num in nums: 
-    output += phone_number.get( num, " !!") + ' '
+character = ""
+for emoji in emojis:
+    message = message.replace(emoji, emojis[emoji])
 
-print(output)
- 
+print(message)
