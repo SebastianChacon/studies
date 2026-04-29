@@ -1,6 +1,6 @@
 # Assignment: return a emoji
 
-message = "I'm very happy :)"
+message = input("send a message: ")
 
 emojis = {
     ":)": "🙂",
@@ -11,9 +11,9 @@ emojis = {
     "<3": "❤️"
 }
 
+def find_emoji():
+    character = ""
+    for emoji in emojis:
+        return print(message.replace(emoji, emojis[emoji]))
 
-character = ""
-for emoji in emojis:
-    message = message.replace(emoji, emojis[emoji])
-
-print(message)
+find_emoji()
