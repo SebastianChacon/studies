@@ -1,10 +1,24 @@
-# Assignment: remove duplicate values of the list
+# Assignment: number
 
-duplicate = [ 2, 3, 4, 4, 2, 5, 3, 7, 2]
-unique = []
+nums = "123"
 
-for item in duplicate:
-    if item not in unique:
-        unique.append(item)
+phone_number = {
+    "1": "uno",
+    "2": "dos",
+    "3": "three",
+    "4": "Four",
+    "5": "Five",
+    "6": "Six",
+    "7": "Seven",
+    "8": "Eight",
+    "9": "Nine",
+    "0": "Zero"
+}
 
-print(unique)
+output = ""
+
+for num in nums: 
+    output += phone_number.get( num, " !!") + ' '
+
+print(output)
+ 
