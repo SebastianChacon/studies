@@ -1,0 +1,35 @@
+# --- RUST (Optimizado para subcarpetas) ---
+# Al quitar la "/" inicial, ignora "target" en cualquier nivel
+target/
+**/*.rs.bk
+.cargo/
+
+# --- PYTHON ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+*.env
+
+# --- SISTEMA OPERATIVO ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+Thumbs.db
+Desktop.ini
+
+# --- EDITORES / IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OTROS ---
+dist/
+build/
+*.log
+*.tmp

@@ -1,19 +1,14 @@
-# Assignment: return a emoji
+# Assignment: create a dice
 
-message = input("send a message: ")
+import random
 
-emojis = {
-    ":)": "🙂",
-    ":(": "🙁",
-    ":c": "☹️",
-    ":D": "😃",
-    "xD": "😆",
-    "<3": "❤️"
-}
+class Dice:
+    def roll(self):
+        first = random.randint(1, 6)
+        second = random.randint(1, 6)
+        return first, second
 
-def find_emoji():
-    character = ""
-    for emoji in emojis:
-        return print(message.replace(emoji, emojis[emoji]))
 
-find_emoji()
+dice = Dice()
+
+print(dice.roll())
