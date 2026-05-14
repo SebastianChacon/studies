@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyFirstSteps > snapShotAllMatch 1`] = `
+<div>
+  <section
+    style="gap: 10px; align-items: center;"
+  >
+    <div
+      data-testid="CounterItem"
+    />
+    <div
+      data-testid="CounterItem"
+    />
+    <div
+      data-testid="CounterItem"
+    />
+    <div
+      data-testid="CounterItem"
+    />
+  </section>
+</div>
+`;

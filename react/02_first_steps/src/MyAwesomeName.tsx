@@ -1,37 +1,22 @@
-import { useState } from "react";
+import { MyFirstSteps } from "./MyFirstSteps";
 
 interface Props {
   firstName: string;
   lastName: string;
 }
 
+export interface Item {
+  productName: string;
+  quantity: number;
+}
+
 export const MyAwesomeName = ({ firstName, lastName }: Props) => {
-  const [count, setCount] = useState(10);
-
-  const handleAdd = () => {
-    setCount(count + 1);
-  };
-
-  const handleSubtract = () => {
-    setCount(count - 1);
-  };
-
   return (
     <>
-      <h3>
-        {firstName} + {lastName}
-      </h3>
-      <section
-        style={{
-          gap: 10,
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <button onClick={handleAdd}>add</button>
-        <p>{count}</p>
-        <button onClick={handleSubtract}>subtract</button>
-      </section>
+      <h1 data-testid="first-name-tittle">{firstName}</h1>
+      <h1>Mateo</h1>
+      <h2>{lastName}</h2>
+      <MyFirstSteps />
     </>
   );
 };
