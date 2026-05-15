@@ -3,45 +3,43 @@ import { render, screen } from "@testing-library/react";
 import { MyAwesomeName } from "./MyAwesomeName";
 
 describe("My awesome name", () => {
-  test("Should be render first and lastName", () => {
+  test("should render firstName in the first h1", () => {
     const firstName = "Zoto";
-    const LastName = "Chacon";
+    const lastName = "Chacon";
 
-    const { container } = render(
-      <MyAwesomeName firstName={firstName} lastName={LastName} />,
-    );
+    render(<MyAwesomeName firstName={firstName} lastName={lastName} />);
 
-    const h1Text = container.querySelector("h1");
-    const h2Text = container.querySelector("h2")?.innerHTML;
-
-    expect(h1Text?.innerHTML).toContain(firstName);
-    expect(h2Text).toContain(LastName);
-  });
-
-  test("should render firstName and lastName - screen", () => {
-    const firstName = "Zoto";
-    const LastName = "Chacon";
-    render(<MyAwesomeName firstName={firstName} lastName={LastName} />);
-    // screen.debug();
-    // console.log(container.innerHTML);
-
-    // const h1 = screen.getByRole('heading', {
-    //   level: 1,
-    // });
     const h1 = screen.getByTestId("first-name-tittle");
     expect(h1.innerHTML).toContain(firstName);
   });
-});
 
-it("renders with name", () => {
-  render(<MyAwesomeName firstName="Mateo" lastName="Chavez" />);
-});
+  test("should render lastName in the h2", () => {
+    const lastName = "Chacon";
 
-// Tests adicionales para cubrir las ramas "E"
-it("renders with empty strings", () => {
-  render(<MyAwesomeName firstName="" lastName="" />);
-});
+    render(<MyAwesomeName firstName="Zoto" lastName={lastName} />);
 
-it("renders with undefined-like values", () => {
-  render(<MyAwesomeName firstName={undefined!} lastName={undefined!} />);
+    const h2 = screen.getByRole("heading", { level: 2 });
+    expect(h2.innerHTML).toContain(lastName);
+  });
+
+  test("should render the static 'Mateo' heading", () => {
+    render(<MyAwesomeName firstName="Zoto" lastName="Chacon" />);
+
+    const headings = screen.getAllByRole("heading", { level: 1 });
+    const mateoHeading = headings.find((h) => h.innerHTML === "Mateo");
+    expect(mateoHeading).toBeDefined();
+  });
+
+  it("renders with empty strings - no crash", () => {
+    render(<MyAwesomeName firstName="" lastName="" />);
+
+    expect(screen.getByTestId("first-name-tittle")).toBeDefined();
+  });
+
+  it("renders with empty strings - headings exist", () => {
+    render(<MyAwesomeName firstName="" lastName="" />);
+
+    const allHeadings = screen.getAllByRole("heading");
+    expect(allHeadings.length).toBeGreaterThanOrEqual(3);
+  });
 });
